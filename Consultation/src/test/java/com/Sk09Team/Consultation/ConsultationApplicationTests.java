@@ -1,10 +1,10 @@
-package com.Sk09Team.ConsultationService;
+package com.Sk09Team.Consultation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OrderServiceApplicationTests {
+class ConsultationApplicationTests {
 
 	@Test
 	void contextLoads() {

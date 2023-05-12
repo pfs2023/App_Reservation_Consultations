@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/medXPS/ConfigServer
+          uri: https://github.com/cimoDevOps/ConfigServer
           clone-on-start: true
 
 
