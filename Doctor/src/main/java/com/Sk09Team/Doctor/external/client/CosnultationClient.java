@@ -1,2 +1,4 @@
-package com.Sk09Team.Doctor.external.client;public interface CosnultationClient {
+package com.Sk09Team.Doctor.external.client;
+
+public interface CosnultationClient {
 }

@@ -1,2 +1,4 @@
-package com.Sk09Team.Doctor.service;public interface DoctorService {
+package com.Sk09Team.Doctor.service;
+
+public interface DoctorService {
 }
