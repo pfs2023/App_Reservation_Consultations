@@ -1,21 +1,18 @@
 package com.Sk09Team.Consultation.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name= " CONSULTATION_DETAILS ")
 public class Consultation {
+    @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
@@ -37,9 +34,6 @@ public class Consultation {
     private String place ;
     @Column(name = "medical_info")
     private String  medical_info ;
-
-
-
 
 
 

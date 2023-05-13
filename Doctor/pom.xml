@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Sk09Team</groupId>
-	<artifactId>Consultation</artifactId>
+	<artifactId>Doctor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Consultation</name>
-	<description>consultation service </description>
+	<name>Doctor</name>
+	<description>Doctor microservice </description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.2</spring-cloud.version>
@@ -28,19 +28,12 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<dependency>
-
-		<groupId>org.springframework.cloud</groupId>
-
-		<artifactId>spring-cloud-starter-config</artifactId>
-
-	</dependency>
 
 		<dependency>
 			<groupId>com.mysql</groupId>

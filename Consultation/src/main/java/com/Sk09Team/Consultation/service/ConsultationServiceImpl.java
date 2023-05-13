@@ -14,13 +14,13 @@ import java.util.List;
 
 @Service
 public class ConsultationServiceImpl implements ConsultationService {
-    @Autowired
+    //@Autowired
     private PatientClient patientClient;
 
 
     @Autowired
      private ConsultationRepository consultationRepository;
-    @Autowired
+   // @Autowired
     private  DoctorClient doctorClient;
 
     @Override
