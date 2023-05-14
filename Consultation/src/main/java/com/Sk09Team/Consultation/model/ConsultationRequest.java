@@ -19,5 +19,6 @@ public class ConsultationRequest {
     private String  motif;
     private String place ;
     private String  medical_info ;
+    private ConsultationStatus consultationStatus = ConsultationStatus.PENDING;
 
 }

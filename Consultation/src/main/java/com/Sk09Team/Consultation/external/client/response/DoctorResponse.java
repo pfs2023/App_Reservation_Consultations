@@ -16,12 +16,15 @@ public class DoctorResponse {
     private long doctorId;
     private String city ;
     private String specialty ;
-    private String doctorName ;
+    private String firstName ;
+    private String lastName ;
     private String location ;
     private List<String> diplomas;
+    private String doctorPhone ;
+    private String doctorEmail ;
     private String address ;
     private String place;
     private PaymentMode paymentMode;
-    private List<String> language ;
+    private List<String> languages ;
 
 }

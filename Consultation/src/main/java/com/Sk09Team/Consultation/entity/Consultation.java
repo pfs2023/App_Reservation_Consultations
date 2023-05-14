@@ -1,5 +1,6 @@
 package com.Sk09Team.Consultation.entity;
 
+import com.Sk09Team.Consultation.model.ConsultationStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,7 +24,7 @@ public class Consultation {
     @Column(name = "doctorName")
     private String doctorName ;
     @Column(name = "speciality")
-    private String speciality ;
+    private String specialty ;
     @Column(name = "location")
     private String location ;
     @Column(name = "startAt")
@@ -34,6 +35,9 @@ public class Consultation {
     private String place ;
     @Column(name = "medical_info")
     private String  medical_info ;
+    @Column(name="status")
+    private ConsultationStatus consultationStatus;
+
 
 
 

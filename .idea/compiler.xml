@@ -8,16 +8,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ConfigServer" />
-        <module name="OrderService" />
+        <module name="Doctor" />
         <module name="service-registry" />
         <module name="CloudGateway" />
+        <module name="Consultation" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="OrderService" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CloudGateway" options="-parameters" />
       <module name="ConfigServer" options="-parameters" />
+      <module name="Consultation" options="-parameters" />
+      <module name="Doctor" options="-parameters" />
       <module name="OrderService" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>
