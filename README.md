@@ -1,10 +1,5 @@
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# gestion_cabinets_medical
-# app_gestion_cabinets_medical
+Micorservices App 
+to run the app --> run service regestry first / then run config service ther Api-Gatway service 
+To run cloud Gateway service run Radis container 
+---> now  you can run all microservices 
+

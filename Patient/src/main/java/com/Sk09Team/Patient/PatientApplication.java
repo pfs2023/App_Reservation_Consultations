@@ -1,16 +1,15 @@
-package com.Sk09Team.Consultation;
+package com.Sk09Team.Patient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients
-
 @SpringBootApplication
-public class ConsultationApplication {
+public class PatientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConsultationApplication.class, args);
+		SpringApplication.run(PatientApplication.class, args);
 	}
 
 }

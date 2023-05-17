@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/consultation")
 public class ConsultationController {
     @Autowired
     ConsultationService consultationService;
 
-    @GetMapping("/doctor/{city}/{specialty}")
+    @GetMapping("/{city}/{specialty}/listDoctors")
     public ResponseEntity<DoctorResponse> getDoctorsByCityAndSpecialty(@PathVariable("city") String city, @PathVariable("specialty") String specialty) {
         DoctorResponse doctorResponse
                 = (DoctorResponse) consultationService.getDoctorsByCityAndSpecialty(city, specialty);
@@ -30,10 +30,10 @@ public class ConsultationController {
     @PostMapping("/reserve")
     public ResponseEntity<Long> reserveConsultation(@RequestBody ConsultationRequest consultationRequest){
         long consultationId  =consultationService.reserveConsultation(consultationRequest);
-        return new ResponseEntity<>( consultationId, HttpStatus.OK);
+        return new ResponseEntity<>( consultationId, HttpStatus.CREATED);
 
     }
-    @GetMapping("/doctor/{city}")
+    @GetMapping("/{city}/listDoctors")
     public ResponseEntity<DoctorResponse> getDoctorsByCityAndSpecialty(@PathVariable("city") String city) {
         DoctorResponse doctorResponse
                 = (DoctorResponse) consultationService.getDoctorsByCity(city);
@@ -41,7 +41,7 @@ public class ConsultationController {
         return new ResponseEntity<>(doctorResponse,
                 HttpStatus.OK);
     }
-    @GetMapping("/doctor/{specialty}")
+    @GetMapping("/doctor/{specialty}/listDoctors")
     public ResponseEntity<DoctorResponse> getDoctorsBySpecialty( @PathVariable("specialty") String specialty) {
         DoctorResponse doctorResponse
                 = (DoctorResponse) consultationService.getDoctorsBySpecialty(specialty);
@@ -49,7 +49,7 @@ public class ConsultationController {
         return new ResponseEntity<>(doctorResponse,
                 HttpStatus.OK);
     }
-    @GetMapping("/doctor")
+    @GetMapping("/listDoctors")
     public ResponseEntity<DoctorResponse> getAllDoctors() {
         DoctorResponse doctorResponse
                 = (DoctorResponse) consultationService.getAllDoctors();
@@ -57,27 +57,27 @@ public class ConsultationController {
         return new ResponseEntity<>(doctorResponse,
                 HttpStatus.OK);
     }
-    @DeleteMapping("/delete/{consultationtId}/{patientId}")
+    @DeleteMapping("/{consultationtId}/{patientId}/delete")
     public ResponseEntity<List<Long>>deleteConsultation(@PathVariable("consultationtId") long  consultationtId ,@PathVariable("patientId") long  patientId){
         List<Long> data = consultationService.deleteConsultation( consultationtId,patientId);
         return new ResponseEntity<>(data, HttpStatus.OK);
     }
-    @PutMapping("/approveConsultation/{consultationId}/{doctorId}")
+    @PutMapping("/{consultationId}/{doctorId}/approve")
     public ResponseEntity<Long> approveConsultation(@PathVariable("consultationId") long consultationId,@PathVariable("doctorId") long doctorId ){
         long consId = consultationService.approveConsultation(consultationId,doctorId);
         return new ResponseEntity<>(consId,HttpStatus.OK);
     }
-    @PutMapping("/declineConsultation/{consultationId}/{doctorId}")
+    @PutMapping("/{consultationId}/{doctorId}/decline")
     public ResponseEntity<Long> declineConsultation(@PathVariable("consultationId") long consultationId,@PathVariable("doctorId") long doctorId ){
         long consId = consultationService.approveConsultation(consultationId,doctorId);
         return new ResponseEntity<>(consId,HttpStatus.OK);
     }
-    @GetMapping("/doctor/{doctorId}/consultations")
+    @GetMapping("/{doctorId}/listConsultationsForDoctor")
     public ResponseEntity<List<ConsultationResponse>> getAllConsultationsForDoctor(@PathVariable("doctorId") long doctorId) {
         List<ConsultationResponse> consultationResponses= consultationService.getAllConsultationsForDoctor(doctorId);
         return  new ResponseEntity<>(consultationResponses, HttpStatus.OK);
     }
-    @GetMapping("/patient/{patientId}/consultations")
+    @GetMapping("/{patientId}/listConsultationsForPatient")
     public ResponseEntity<List<ConsultationResponse>> getAllConsultationsForPatient(@PathVariable("patientId") long doctorId) {
         List<ConsultationResponse> consultationResponses= consultationService.getAllConsultationsForDoctor(doctorId);
         return  new ResponseEntity<>(consultationResponses, HttpStatus.OK);
