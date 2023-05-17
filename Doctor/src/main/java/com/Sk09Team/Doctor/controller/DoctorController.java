@@ -1,14 +1,11 @@
 package com.Sk09Team.Doctor.controller;
 import com.Sk09Team.Doctor.service.DoctorService;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.Jwts;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
-import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping("/doctor")
 public class DoctorController {

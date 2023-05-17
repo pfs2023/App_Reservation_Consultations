@@ -6,22 +6,48 @@ spring:
     name: API-GATEWAY
   config:
     import: configserver:http://localhost:9296
-  #cloud:
-    #gateway:
-      #routes:
-        #- id : ORDER-SERVICE
-          #uri: lb://ORDER-SERVICE
-          #predicates:
-            #- Path=/order/**
-          #filters:
-            #- name: CircuitBreaker
-              #args:
-                #name: ORDER-SERVICE
-                #fallbackuri: forward:/orderServiceFallBack
-            #- name: RequestRateLimiter
-              #args:
-                #redis-rate-limiter.replenishRate: 1
-                #redis-rate-limiter.burstCapacity: 1
+  cloud:
+    gateway:
+      routes:
+        - id : CONSULTATION-SERVICE
+          uri: lb://CONSULTATION-SERVICE
+          predicates:
+            - Path=/consultation/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: CONSULTATION-SERVICE
+                fallbackuri: forward:/consultationServiceFallBack
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: PATIENT-SERVICE
+          uri: lb://CONSULTATION-SERVICE
+          predicates:
+            - Path=/patient/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: PATIENT-SERVICE
+                fallbackuri: forward:/patientServiceFallBack
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: DOCTOR-SERVICE
+          uri: lb://DOCTOR-SERVICE
+          predicates:
+            - Path=/doctor/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: DOCTOR-SERVICE
+                fallbackuri: forward:/doctorServiceFallBack
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
 
 
 
