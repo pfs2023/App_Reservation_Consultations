@@ -5,7 +5,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:http://${CONFIG_SERVER_URL:localhost}:9296
   cloud:
     gateway:
       routes:
@@ -18,12 +18,12 @@ spring:
               args:
                 name: CONSULTATION-SERVICE
                 fallbackuri: forward:/consultationServiceFallBack
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 1
+            #- name: RequestRateLimiter
+              #args:
+                #redis-rate-limiter.replenishRate: 1
+                #redis-rate-limiter.burstCapacity: 1
         - id: PATIENT-SERVICE
-          uri: lb://CONSULTATION-SERVICE
+          uri: lb://PATIENT-SERVICE
           predicates:
             - Path=/patient/**
           filters:
@@ -31,10 +31,10 @@ spring:
               args:
                 name: PATIENT-SERVICE
                 fallbackuri: forward:/patientServiceFallBack
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 1
+            #- name: RequestRateLimiter
+              #args:
+                #redis-rate-limiter.replenishRate: 1
+                #redis-rate-limiter.burstCapacity: 1
         - id: DOCTOR-SERVICE
           uri: lb://DOCTOR-SERVICE
           predicates:
@@ -44,17 +44,10 @@ spring:
               args:
                 name: DOCTOR-SERVICE
                 fallbackuri: forward:/doctorServiceFallBack
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 1
-                redis-rate-limiter.burstCapacity: 1
+            #- name: RequestRateLimiter
+              #args:
+                #redis-rate-limiter.replenishRate: 1
+                #redis-rate-limiter.burstCapacity: 1
 
 
 
-#okta:
-  #oauth2:
-    #issuer: https://dev-15585796.okta.com/oauth2/default
-    #audience: api://default
-    #client-id: 0oa6cgklvwIS2SoFZ5d7
-    #client-secret: L_VPQB5XQX5QAhnxaDqA0IhWG-TImnVpaHW7ER33
-    #scopes: openid, email, profile, offline_access

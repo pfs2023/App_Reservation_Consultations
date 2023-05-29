@@ -1,10 +1,15 @@
 package com.Sk09Team.Doctor.controller;
+import com.Sk09Team.Doctor.model.DoctorRequest;
+import com.Sk09Team.Doctor.model.DoctorResponse;
 import com.Sk09Team.Doctor.service.DoctorService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/doctor")
@@ -41,13 +46,48 @@ public class DoctorController {
         }
         return (username != null && userId != null && userId.equals(doctorId) && roles != null && roles.contains("ROLE_DOCTOR"));
     }*/
+    @GetMapping("/{city}/{specialty}/listDoctorsByCityAndSpecialty")
+    public ResponseEntity<List<DoctorResponse>> getDoctorsByCityAndSpecialty(@PathVariable("city") String city, @PathVariable("specialty") String specialty) {
+        List<DoctorResponse> doctorResponse
+                =  doctorService.getDoctorsByCityAndSpecialty(city, specialty);
+
+        return new ResponseEntity<>(doctorResponse,
+                HttpStatus.OK);
+    }
+    @GetMapping("/{city}/listDoctorsByCity")
+    public ResponseEntity<List<DoctorResponse>> getDoctorsByCity(@PathVariable("city") String city) {
+        List<DoctorResponse> doctorResponses
+                =  doctorService.getDoctorsByCity(city);
+
+        return new ResponseEntity<>(doctorResponses,
+                HttpStatus.OK);
+    }
+    @GetMapping("/doctor/{specialty}/listDoctorsBySpecialty")
+    public ResponseEntity<List<DoctorResponse>> getDoctorsBySpecialty( @PathVariable("specialty") String specialty) {
+        List<DoctorResponse> doctorResponses
+                =  doctorService.getDoctorsBySpecialty(specialty);
+
+        return new ResponseEntity<>(doctorResponses,
+                HttpStatus.OK);
+    }
+    @GetMapping("/listDoctors")
+    public ResponseEntity<List<DoctorResponse>> getAllDoctors() {
+        List<DoctorResponse> doctorResponses
+                =  doctorService.getAllDoctors();
+
+        return new ResponseEntity<>(doctorResponses,
+                HttpStatus.OK);
+    }
     @PutMapping("/{consultationId}/{doctorId}/approve")
     public ResponseEntity<Long> approveConsultation(@PathVariable("consultationId") Long consultationId,
                                                       @PathVariable("doctorId") Long doctorId) {
 
         return doctorService.approveConsultation(consultationId,doctorId);
     }
-
-
+    @PostMapping("/register")
+    public ResponseEntity<Long> registerDoctor(@RequestBody DoctorRequest doctorRequest){
+        long doctorId =doctorService.registerDoctor(doctorRequest);
+        return new ResponseEntity<>(doctorId,HttpStatus.CREATED);
+    }
 
 }

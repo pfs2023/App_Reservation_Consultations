@@ -20,4 +20,5 @@ public class ConsultationRequest {
     private String place ;
     private String  medical_info ;
     private ConsultationStatus consultationStatus = ConsultationStatus.PENDING;
+
 }

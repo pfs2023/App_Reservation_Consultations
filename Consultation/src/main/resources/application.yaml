@@ -15,7 +15,12 @@ spring:
     name: CONSULTATION-SERVICE
 
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:http://${CONFIG_SERVER_URL:localhost}:9296
+
+
+
+
+
 resilience4j:
   circuitbreaker:
     instances:
@@ -27,6 +32,7 @@ resilience4j:
       permitted-number-of-calls-in-half-open-state: 3
       sliding-window-size: 10
       sliding-window-type: COUNT_BASED
+
 
 
 

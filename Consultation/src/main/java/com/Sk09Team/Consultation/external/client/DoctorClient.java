@@ -10,13 +10,7 @@ import java.util.List;
 @CircuitBreaker(name="external",fallbackMethod = "fallback")
 @FeignClient(name = "DOCTOR-SERVICE")
 public interface DoctorClient {
-    @GetMapping
-    List<DoctorResponse> getDoctorsByCityAndSpecialty(@PathVariable String city, @PathVariable String specialty);
-    @GetMapping
-    List<DoctorResponse> getDoctorByCity(@PathVariable String city);
-    @GetMapping
-    List<DoctorResponse>getDoctorBySpecialty(@PathVariable String specialty);
-    List<DoctorResponse> getAllDoctors();
+
     default void fallback(Exception e){
         throw new RuntimeException("Doctor Service is not available!");
 

@@ -1,10 +1,7 @@
 package com.Sk09Team.Doctor.entity;
 
 import com.Sk09Team.Doctor.model.PaymentMode;
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +15,7 @@ import java.util.List;
 
 public class Doctor {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long doctorId;
     @Column(name="firstName")
     private String firstName ;
@@ -29,22 +27,31 @@ public class Doctor {
     private String registrationNumber ;
     @Column(name="address")
     private String address ;
+    @Column(name="email")
+    private String doctorEmail;
+    @Column(name="phone")
+    private String doctorPhone;
     @Column(name="city")
     private String city ;
+    @Column(name="post_code")
+    private  String postCode;
     @Column(name="specialty")
     private String specialty ;
     @Column(name="location")
     private String location ;
-    @Column(name="diplomas")
     @ElementCollection
+    @Column(name="diplomas")
     private List<String> diplomas;
     @Column(name="place")
     private String place;
     @Column(name="paymentMode")
     private PaymentMode paymentMode;
-    @Column(name="languages")
     @ElementCollection
+    @Column(name="languages")
     private List<String> languages;
+   @Column(columnDefinition ="TEXT")
+    private String  calendar;
+
 }
 
 

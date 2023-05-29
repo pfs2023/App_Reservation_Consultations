@@ -8,15 +8,9 @@ import com.Sk09Team.Consultation.model.ConsultationResponse;
 import java.util.List;
 
 public interface ConsultationService {
-    List<DoctorResponse> getDoctorsByCityAndSpecialty(String city, String specialty);
+
 
     long reserveConsultation(ConsultationRequest consultationRequest);
-
-    List<DoctorResponse> getDoctorsByCity(String city);
-
-    List<DoctorResponse>getDoctorsBySpecialty(String specialty);
-    long getPatientById(long patientId);
-    List<DoctorResponse> getAllDoctors();
 
     List<Long> deleteConsultation(long consultationtId, long patientId);
 
