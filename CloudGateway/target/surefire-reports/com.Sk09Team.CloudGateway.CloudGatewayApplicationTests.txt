@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.Sk09Team.CloudGateway.CloudGatewayApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.227 s - in com.Sk09Team.CloudGateway.CloudGatewayApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.763 s - in com.Sk09Team.CloudGateway.CloudGatewayApplicationTests
