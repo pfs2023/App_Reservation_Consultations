@@ -10,6 +10,5 @@ public interface DoctorRepository extends JpaRepository<Doctor,Long> {
     List<Doctor> findByCity(String city);
     List<Doctor> findBySpecialty(String specialty); // Update the method name to match the field name
     List<Doctor> findByCityAndSpecialty(String city, String specialty);
-    
-
+    List<Doctor> findByLastName(String lastName);
 }

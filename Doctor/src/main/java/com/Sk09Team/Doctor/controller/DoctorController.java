@@ -1,4 +1,5 @@
 package com.Sk09Team.Doctor.controller;
+import com.Sk09Team.Doctor.model.ConsultationResponseForDoctor;
 import com.Sk09Team.Doctor.model.DoctorRequest;
 import com.Sk09Team.Doctor.model.DoctorResponse;
 import com.Sk09Team.Doctor.service.DoctorService;
@@ -70,6 +71,15 @@ public class DoctorController {
         return new ResponseEntity<>(doctorResponses,
                 HttpStatus.OK);
     }
+    @GetMapping("/doctor/{lastName}/listDoctorsByLastName")
+    public ResponseEntity<List<DoctorResponse>> getDoctorsByLastName(@PathVariable("lastName") String lastName) {
+        List<DoctorResponse> doctorResponses
+                =  doctorService.getDoctorsByLastName(lastName);
+        return new ResponseEntity<>(doctorResponses,
+                HttpStatus.OK);
+
+
+    }
     @GetMapping("/listDoctors")
     public ResponseEntity<List<DoctorResponse>> getAllDoctors() {
         List<DoctorResponse> doctorResponses
@@ -89,5 +99,10 @@ public class DoctorController {
         long doctorId =doctorService.registerDoctor(doctorRequest);
         return new ResponseEntity<>(doctorId,HttpStatus.CREATED);
     }
+    @GetMapping("/{doctorId}/listConsultationsForDoctor")
+    public ResponseEntity<List<ConsultationResponseForDoctor>> getAllConsultationsForDoctor(@PathVariable("doctorId") long doctorId){
+        return (ResponseEntity<List<ConsultationResponseForDoctor>>) doctorService.getAllConsultationsForDoctor(doctorId);
+    }
+
 
 }

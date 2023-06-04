@@ -1,6 +1,7 @@
 package com.Sk09Team.Doctor.service;
 
 import com.Sk09Team.Doctor.entity.Doctor;
+import com.Sk09Team.Doctor.model.ConsultationResponseForDoctor;
 import com.Sk09Team.Doctor.model.DoctorRequest;
 import com.Sk09Team.Doctor.model.DoctorResponse;
 import org.springframework.http.ResponseEntity;
@@ -21,5 +22,9 @@ public interface DoctorService {
     List<DoctorResponse> getDoctorsByCityAndSpecialty(String city, String specialty);
 
     long registerDoctor(DoctorRequest doctorRequest);
+
+    List<DoctorResponse> getDoctorsByLastName(String lastName);
+
+     ResponseEntity<List<ConsultationResponseForDoctor>>getAllConsultationsForDoctor(long doctorId);
 }
 

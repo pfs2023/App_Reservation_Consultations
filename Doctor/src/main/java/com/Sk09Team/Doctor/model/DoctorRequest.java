@@ -2,7 +2,7 @@ package com.Sk09Team.Doctor.model;
 
 import lombok.*;
 
-import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

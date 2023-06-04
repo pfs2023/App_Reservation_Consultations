@@ -9,7 +9,5 @@ public class DoctorProfileRequest {
     private String place;
     private PaymentMode paymentMode;
 
-    private String recurringDays;
-    private String availabilitySlots;
 
 }
