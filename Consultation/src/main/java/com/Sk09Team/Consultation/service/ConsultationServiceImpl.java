@@ -4,9 +4,7 @@ import com.Sk09Team.Consultation.entity.Consultation;
 import com.Sk09Team.Consultation.external.client.DoctorClient;
 import com.Sk09Team.Consultation.external.client.PatientClient;
 import com.Sk09Team.Consultation.external.client.response.DoctorResponse;
-import com.Sk09Team.Consultation.model.ConsultationRequest;
-import com.Sk09Team.Consultation.model.ConsultationResponse;
-import com.Sk09Team.Consultation.model.ConsultationStatus;
+import com.Sk09Team.Consultation.model.*;
 import com.Sk09Team.Consultation.repository.ConsultationRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,7 @@ import java.util.Optional;
 
 @Service
 public class ConsultationServiceImpl implements ConsultationService {
-    //@Autowired
+    @Autowired
     private PatientClient patientClient;
     @Autowired
      private ConsultationRepository consultationRepository;
@@ -69,9 +67,35 @@ public class ConsultationServiceImpl implements ConsultationService {
     }
 
     @Override
-    public List<ConsultationResponse> getAllConsultationsForDoctor(long doctorId) {
+    public List<ConsultationResponseForDoctor> getAllConsultationsForDoctor(long doctorId) {
         List<Consultation> consultations = consultationRepository.findByDoctorId(doctorId);
-        return getConsultationResponses(consultations);
+        List<ConsultationResponseForDoctor> consultationResponseForDoctors=new ArrayList<>();
+        for(Consultation consultation :consultations){
+        PatientResponse patientResponse=patientClient.getPatientByPatientId(consultation.getPatientId());
+        ConsultationResponseForDoctor consultationResponse = ConsultationResponseForDoctor.builder()
+                    .doctorName(consultation.getDoctorName())
+                    .doctorId(consultation.getDoctorId())
+                    .place(consultation.getPlace())
+                    .motif(consultation.getMotif())
+                    .startAt(consultation.getStartAt())
+                    .medical_info(consultation.getMedical_info())
+                    .location(consultation.getLocation())
+                    .patientId(consultation.getPatientId())
+                    .specialty(consultation.getSpecialty())
+                    .patientFirstName(patientResponse.getFirstName())
+                    .patientLastName(patientResponse.getLastName())
+                    .patientGender(patientResponse.getGender())
+                    .patientPhone(patientResponse.getPhone())
+                    .patientbirthDate(patientResponse.getBirthDate())
+                    .patientCIN(patientResponse.getCIN())
+                    .patientPostCode(patientResponse.getPostCode())
+                    .patientEmail(patientResponse.getEmail())
+                    .patientCity(patientResponse.getCity())
+                    .patientAddress(patientResponse.getAddress())
+                    .build();
+            consultationResponseForDoctors.add(consultationResponse);
+        }
+        return consultationResponseForDoctors;
     }
 
     @Override
@@ -100,5 +124,7 @@ public class ConsultationServiceImpl implements ConsultationService {
         }
         return consultationResponses;
     }
+
+
 
 }
