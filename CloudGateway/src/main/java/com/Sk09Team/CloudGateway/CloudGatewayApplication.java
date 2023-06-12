@@ -9,8 +9,9 @@ import org.springframework.cloud.client.circuitbreaker.Customizer;
 import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import reactor.core.publisher.Mono;
-
+@CrossOrigin("http://localhost:5173")
 @SpringBootApplication
 @EnableEurekaClient
 public class CloudGatewayApplication {

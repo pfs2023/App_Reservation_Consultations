@@ -2,5 +2,7 @@ package com.Sk09Team.Doctor.model;
 
 public enum PaymentMode {
     CASH,
-    DEBIT_CARD
+    DEBIT_CARD,
+    CREDIT_CARD
+
 }

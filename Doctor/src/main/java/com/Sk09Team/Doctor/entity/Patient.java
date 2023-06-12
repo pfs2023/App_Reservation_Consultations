@@ -16,8 +16,10 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class Patient {
+    private long doctorId ;
     @Id
     private  String patientCIN  ;
+
     private String patientFirstName;
     private String patientLastName ;
     private String patientGender ;

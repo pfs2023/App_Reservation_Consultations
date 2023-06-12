@@ -24,6 +24,10 @@ public interface DoctorClient {
 
     @GetMapping("/listDoctors")
     public ResponseEntity<List<DoctorResponse>> getAllDoctors() ;
+    @GetMapping("/{lastName}/listDoctorsByLastName")
+    public ResponseEntity<List<DoctorResponse>> getDoctorsByLastName(@PathVariable("lastName") String lastName);
+    @GetMapping("/{doctorId}/getDoctorById")
+    public DoctorResponse getDoctorByDoctorId(@PathVariable long doctorId) ;
 
 
 

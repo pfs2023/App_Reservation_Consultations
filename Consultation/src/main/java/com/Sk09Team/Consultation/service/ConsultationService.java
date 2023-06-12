@@ -1,7 +1,7 @@
 package com.Sk09Team.Consultation.service;
 
 import com.Sk09Team.Consultation.entity.Consultation;
-import com.Sk09Team.Consultation.external.client.response.DoctorResponse;
+
 import com.Sk09Team.Consultation.model.ConsultationRequest;
 import com.Sk09Team.Consultation.model.ConsultationResponse;
 import com.Sk09Team.Consultation.model.ConsultationResponseForDoctor;

@@ -15,6 +15,7 @@ public class DoctorRequest {
     private  String specialty ;
     private String postCode;
     private  String address  ;
+    private String phoneNumber ;
    private String password ;
 
 

@@ -3,7 +3,7 @@ package com.Sk09Team.Consultation.service;
 import com.Sk09Team.Consultation.entity.Consultation;
 import com.Sk09Team.Consultation.external.client.DoctorClient;
 import com.Sk09Team.Consultation.external.client.PatientClient;
-import com.Sk09Team.Consultation.external.client.response.DoctorResponse;
+
 import com.Sk09Team.Consultation.model.*;
 import com.Sk09Team.Consultation.repository.ConsultationRepository;
 import jakarta.persistence.EntityNotFoundException;

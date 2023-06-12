@@ -2,9 +2,7 @@ package com.Sk09Team.Doctor.service;
 import com.Sk09Team.Doctor.entity.Doctor;
 import com.Sk09Team.Doctor.entity.Patient;
 import com.Sk09Team.Doctor.external.client.CosnultationClient;
-import com.Sk09Team.Doctor.model.ConsultationResponseForDoctor;
-import com.Sk09Team.Doctor.model.DoctorRequest;
-import com.Sk09Team.Doctor.model.DoctorResponse;
+import com.Sk09Team.Doctor.model.*;
 import com.Sk09Team.Doctor.repository.DoctorRepository;
 import com.Sk09Team.Doctor.repository.PatientRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -68,6 +66,7 @@ public class DoctorServiceImpl implements  DoctorService {
             if (!patientExists) {
                 // Patient does not exist, create a new patient entity
                 Patient newPatient = Patient.builder()
+                        .doctorId(doctorId)
                         .patientCIN(patientCIN)
                         .patientFirstName(consultation.getPatientFirstName())
                         .patientLastName(consultation.getPatientLastName())
@@ -87,6 +86,62 @@ public class DoctorServiceImpl implements  DoctorService {
         return ResponseEntity.ok(consultations);
     }
 
+    @Override
+    public List<Patient> getAllPatientsByDoctorId(long doctorId) {
+        return patientRepository.findByDoctorId(doctorId);
+    }
+
+    @Override
+    public void updateDoctor(long doctorId, DoctorFullProfileRequest doctorRequest) {
+        Doctor doctor = doctorRepository.findById(doctorId)
+                .orElseThrow(() -> new EntityNotFoundException("Doctor not found with id: " + doctorId));
+
+        // Update doctor's personal data using the builder
+        Doctor updatedDoctor = Doctor.builder()
+                .doctorId(doctor.getDoctorId())
+                .firstName(doctorRequest.getFirstName())
+                .lastName(doctorRequest.getLastName())
+                .password(doctorRequest.getPassword())
+                .address(doctorRequest.getAddress())
+                .doctorEmail(doctorRequest.getEmail())
+                .doctorPhone(doctorRequest.getPhone())
+                .city(doctorRequest.getCity())
+                .postCode(doctorRequest.getPostCode())
+                .specialty(doctorRequest.getSpecialty())
+                .location(doctorRequest.getLocation())
+                .diplomas(doctorRequest.getDiplomas())
+                .place(doctorRequest.getPlace())
+                .paymentMode(doctorRequest.getPaymentMode())
+                .languages(doctorRequest.getLanguages())
+                .calendar(doctorRequest.getCalendar())
+                .build();
+
+        doctorRepository.save(updatedDoctor);
+    }
+
+    @Override
+    public DoctorResponse getDoctorByDoctorId(long doctorId) {
+        Doctor doctor = doctorRepository.findById(doctorId)
+                .orElseThrow(() -> new EntityNotFoundException("Doctor not found with id: " + doctorId));
+
+        // Map the patient entity to PatientResponse
+
+        return DoctorResponse.builder()
+                .firstName(doctor.getFirstName())
+                .lastName(doctor.getLastName())
+                .specialty(doctor.getSpecialty())
+                .paymentMode(doctor.getPaymentMode())
+                .location(doctor.getLocation())
+                .doctorPhone(doctor.getDoctorPhone())
+                .doctorEmail(doctor.getDoctorEmail())
+                .diplomas(doctor.getDiplomas())
+                .city(doctor.getCity())
+                .address(doctor.getAddress())
+                .languages(doctor.getLanguages())
+                .calendar(doctor.getCalendar())
+                .place(doctor.getPlace())
+                .build();
+    }
 
     @Override
    public List<DoctorResponse> getAllDoctors() {
@@ -141,4 +196,5 @@ public class DoctorServiceImpl implements  DoctorService {
         }
         return doctorsResponses;
     }
+
 }

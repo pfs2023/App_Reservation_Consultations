@@ -1,5 +1,7 @@
 package com.Sk09Team.Doctor.controller;
+import com.Sk09Team.Doctor.entity.Patient;
 import com.Sk09Team.Doctor.model.ConsultationResponseForDoctor;
+import com.Sk09Team.Doctor.model.DoctorFullProfileRequest;
 import com.Sk09Team.Doctor.model.DoctorRequest;
 import com.Sk09Team.Doctor.model.DoctorResponse;
 import com.Sk09Team.Doctor.service.DoctorService;
@@ -71,7 +73,7 @@ public class DoctorController {
         return new ResponseEntity<>(doctorResponses,
                 HttpStatus.OK);
     }
-    @GetMapping("/doctor/{lastName}/listDoctorsByLastName")
+    @GetMapping("/{lastName}/listDoctorsByLastName")
     public ResponseEntity<List<DoctorResponse>> getDoctorsByLastName(@PathVariable("lastName") String lastName) {
         List<DoctorResponse> doctorResponses
                 =  doctorService.getDoctorsByLastName(lastName);
@@ -103,6 +105,19 @@ public class DoctorController {
     public ResponseEntity<List<ConsultationResponseForDoctor>> getAllConsultationsForDoctor(@PathVariable("doctorId") long doctorId){
         return (ResponseEntity<List<ConsultationResponseForDoctor>>) doctorService.getAllConsultationsForDoctor(doctorId);
     }
-
+    @GetMapping("/{doctorId}/patients")
+    public ResponseEntity<List<Patient>> getAllPatients(@PathVariable("doctorId") long doctorId ) {
+        List<Patient> patients = doctorService.getAllPatientsByDoctorId(doctorId);
+        return ResponseEntity.ok(patients);
+    }
+    @PutMapping("profile/updateProfile/{doctorId}")
+    public ResponseEntity<String> updateDoctor(@PathVariable long doctorId, @RequestBody DoctorFullProfileRequest doctorRequest) {
+        doctorService.updateDoctor(doctorId,doctorRequest);
+        return ResponseEntity.ok("Doctor updated successfully.");
+    }
+    @GetMapping("/{doctorId}/getDoctorById")
+    public DoctorResponse getDoctorByDoctorId(@PathVariable long doctorId) {
+        return doctorService.getDoctorByDoctorId(doctorId);
+    }
 
 }

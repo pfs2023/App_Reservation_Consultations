@@ -2,22 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Patient" />
-        <module name="ConfigServer" />
         <module name="Doctor" />
+        <module name="ConfigServer" />
         <module name="service-registry" />
-        <module name="CloudGateway" />
         <module name="Consultation" />
+        <module name="CloudGateway" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="OrderService" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,7 +21,6 @@
       <module name="ConfigServer" options="-parameters" />
       <module name="Consultation" options="-parameters" />
       <module name="Doctor" options="-parameters" />
-      <module name="OrderService" options="-parameters" />
       <module name="Patient" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>

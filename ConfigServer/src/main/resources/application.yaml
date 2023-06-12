@@ -1,6 +1,8 @@
 server:
   port: 9296
 
+
+
 spring:
   application:
     name: CONFIG-SERVER
@@ -10,8 +12,6 @@ spring:
         git:
           uri: https://github.com/cimoDevOps/ConfigServer
           clone-on-start: true
-
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -19,4 +19,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://192.168.0.44:8761/eureka}

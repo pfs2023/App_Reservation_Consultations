@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2cd28ffd-113a-454f-bb11-ab848c56dba5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/src/main/java/com/Sk09Team/CloudGateway/CloudGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/src/main/java/com/Sk09Team/CloudGateway/CloudGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/classes/com/Sk09Team/CloudGateway/CloudGatewayApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/target/classes/com/Sk09Team/CloudGateway/CloudGatewayApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/classes/com/Sk09Team/CloudGateway/controller/FallbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/target/classes/com/Sk09Team/CloudGateway/controller/FallbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/surefire-reports/2023-05-31T12-19-52_160-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/surefire-reports/TEST-com.Sk09Team.CloudGateway.CloudGatewayApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/target/surefire-reports/TEST-com.Sk09Team.CloudGateway.CloudGatewayApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudGateway/target/surefire-reports/com.Sk09Team.CloudGateway.CloudGatewayApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CloudGateway/target/surefire-reports/com.Sk09Team.CloudGateway.CloudGatewayApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/target/classes/com/Sk09Team/ConfigServer/ConfigServerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/target/classes/com/Sk09Team/ConfigServer/ConfigServerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/target/surefire-reports/2023-05-27T19-56-00_606-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/target/surefire-reports/TEST-com.Sk09Team.ConfigServer.ConfigServerApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/target/surefire-reports/TEST-com.Sk09Team.ConfigServer.ConfigServerApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConfigServer/target/surefire-reports/com.Sk09Team.ConfigServer.ConfigServerApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ConfigServer/target/surefire-reports/com.Sk09Team.ConfigServer.ConfigServerApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/external/client/DoctorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/external/client/DoctorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/external/client/response/DoctorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/service/ConsultationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/service/ConsultationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/service/ConsultationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Consultation/src/main/java/com/Sk09Team/Consultation/service/ConsultationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consultation/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Consultation/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/entity/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/entity/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/entity/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/DoctorFullProfileRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/DoctorFullProfileRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/DoctorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/DoctorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/PaymentMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/model/PaymentMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/repository/DoctorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/repository/DoctorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/repository/PatientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/service/DoctorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/java/com/Sk09Team/Doctor/service/DoctorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doctor/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Doctor/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/entity/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/entity/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/external/client/DoctorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/external/client/DoctorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientRegistrationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientRegistrationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/PatientResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/UpdateProfileResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/model/UpdateProfileResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/patientRepository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/patientRepository/PatientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/service/PatientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/java/com/Sk09Team/Patient/service/PatientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patient/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Patient/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/classes/com/Sk09Team/serviceregistry/ServiceRegistryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/classes/com/Sk09Team/serviceregistry/ServiceRegistryApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/surefire-reports/TEST-com.Sk09Team.serviceregistry.ServiceRegistryApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/surefire-reports/TEST-com.Sk09Team.serviceregistry.ServiceRegistryApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-registry/target/surefire-reports/com.Sk09Team.serviceregistry.ServiceRegistryApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service-registry/target/surefire-reports/com.Sk09Team.serviceregistry.ServiceRegistryApplicationTests.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2R5CFZQwsFDQQ12EKmaDAlOPVvs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.DoctorApplication">
+    <configuration name="CloudGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="CloudGateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.CloudGateway.CloudGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ConfigServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.ConfigServer.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsultationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Consultation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.Consultation.ConsultationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Doctor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.Doctor.DoctorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Patient" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.Patient.PatientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceRegistryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="service-registry" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Sk09Team.serviceregistry.ServiceRegistryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cd28ffd-113a-454f-bb11-ab848c56dba5" name="Changes" comment="" />
+      <created>1686530453570</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686530453570</updated>
+      <workItem from="1686530458985" duration="681000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
